@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Handling Policy | Cipherforge Security Standards</title>
+  <meta name="description" content="Cipherforge internal and client Data Handling Policy: encryption, strict retention schedules (90-day logs, 12-month project files), and secure cryptographic sanitization." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cipherforgge.github.io/cipherforge/data-handling.html" />
+  <meta name="theme-color" content="#0a0d12" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://cipherforgge.github.io/cipherforge/data-handling.html" />
+  <meta property="og:site_name" content="Cipherforge" />
+  <meta property="og:title" content="Data Handling Policy | Cipherforge Security Standards" />
+  <meta property="og:description" content="Cipherforge Data Handling Policy outlining minimization principles, quarterly access reviews, and secure sanitization." />
+  <meta property="og:image" content="https://cipherforgge.github.io/cipherforge/assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Cipherforge Data Handling Policy" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Data Handling Policy | Cipherforge Security Standards" />
+  <meta name="twitter:description" content="Cipherforge Data Handling Policy outlining minimization principles, quarterly access reviews, and secure sanitization." />
+  <meta name="twitter:image" content="https://cipherforgge.github.io/cipherforge/assets/og.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand-link">
+        <span class="brand-logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="#12161e" stroke="#2c3442" stroke-width="1.5" />
+            <path d="M20 7 L31 13 V23 C31 29 25 33 20 35 C15 33 9 29 9 23 V13 Z" stroke="url(#nav-grad-dh)" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M16 20 L24 20 M20 16 L20 24" stroke="#e8ecf1" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="20" cy="20" r="5" stroke="url(#nav-grad-dh)" stroke-width="1.5"/>
+            <defs>
+              <linearGradient id="nav-grad-dh" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7c5cff" />
+                <stop offset="100%" stop-color="#2fe6b8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        Cipherforge
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <nav class="nav-links">
+          <a href="index.html#about">About us</a>
+          <a href="team.html">Our team</a>
+          <a href="trust.html">Trust & legal</a>
+          <a href="documents.html" class="active">Documents</a>
+          <a href="contact.html">Contact us</a>
+        </nav>
+        <div class="nav-right">
+          <a href="contact.html" class="btn btn-primary nav-cta">Talk to a Researcher</a>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="legal-page-header">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <p class="section-tag reveal">Operational Security // CF-DHP-03</p>
+      <h1 class="section-title reveal">Data Handling Policy</h1>
+      <div class="legal-meta reveal">
+        <span>Effective Date: November 1, 2026</span>
+        <span>&bull;</span>
+        <span>Lead Reviewer: Sarah Goldberg, Privacy & Compliance</span>
+        <span>&bull;</span>
+        <span>Version 3.1</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Legal Content -->
+  <main class="legal-content">
+    <div class="legal-notice-box reveal">
+      <strong>Policy Overview:</strong> This operational policy governs how Cipherforge engineers, forensic specialists, and contractors collect, process, store, and sanitize digital artifacts and client information throughout our research lifecycle. Direct inquiries to <a href="mailto:privacy@cipherforge.io" style="color: var(--accent-2); text-decoration: underline;">privacy@cipherforge.io</a>.
+    </div>
+
+    <section class="legal-section reveal">
+      <h2>1. Purpose and Foundational Principles</h2>
+      <p>
+        Cipherforge adheres to three foundational data governance principles:
+      </p>
+      <ul>
+        <li><strong>Data Minimization:</strong> We extract and retain only the minimal technical evidence strictly required to substantiate a vulnerability, replicate an exploit, or determine root cause in an incident investigation.</li>
+        <li><strong>Purpose Limitation:</strong> Information gathered during security assessments is utilized solely for technical verification and reporting back to the client entity.</li>
+        <li><strong>Storage Limitation:</strong> Artifacts are governed by strict automated retention ceilings and cryptographic shredding routines.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section reveal">
+      <h2>2. Categories of Processed Data</h2>
+      <p>Cipherforge categorizes engagement data into three security levels:</p>
+      <ul>
+        <li><strong>Tier 1 — Public / Commercial Contacts:</strong> Prospective client contact details, corporate communications, billing records.</li>
+        <li><strong>Tier 2 — Engagement Telemetry & Logs:</strong> Network traffic traces, proxy logs, scanner telemetry, and system execution metadata.</li>
+        <li><strong>Tier 3 — Sensitive Security Artifacts:</strong> Exploit proof-of-concept scripts, credentials discovered during audits, source code snippets, and customer database schema dumps.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section reveal">
+      <h2>3. Strict Retention Schedules</h2>
+      <p>To eliminate lingering liability and protect client privacy, the following retention limits are strictly enforced:</p>
+      <ul>
+        <li><strong>Commercial & Contact Records:</strong> Retained for twenty-four (24) months following last contact for business continuity and invoicing records.</li>
+        <li><strong>Project Findings & Audit Reports:</strong> Retained for twelve (12) months after delivery to facilitate remediation re-testing, unless client explicitly requests earlier deletion or legal compliance dictates otherwise.</li>
+        <li><strong>Raw Network & Proxy Logs:</strong> Automatically purged after <strong>ninety (90) days</strong> via automated cryptographic sanitization routines.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section reveal">
+      <h2>4. Technical Access Controls and Defense</h2>
+      <p>All client data resides within isolated security boundaries:</p>
+      <ul>
+        <li><strong>Encryption:</strong> AES-256 for all stored data; TLS 1.3 for all endpoints in transit. Encryption keys are rotated regularly and managed via dedicated HSMs.</li>
+        <li><strong>Multi-Factor Authentication (MFA):</strong> Hardware-backed FIDO2 keys (e.g., YubiKey) are mandatory for all research infrastructure and repository access.</li>
+        <li><strong>Role-Based Access Control (RBAC):</strong> Researchers are provisioned access solely to the specific projects they are assigned to.</li>
+        <li><strong>Quarterly Access Reviews:</strong> Access permissions and active cryptographic keys are reviewed and certified by our compliance team every calendar quarter.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section reveal">
+      <h2>5. Incident Management Protocol</h2>
+      <p>
+        Cipherforge operates an internal Security Incident Response Plan encompassing four phases:
+      </p>
+      <ol>
+        <li><strong>Triage:</strong> Immediate technical categorization within 60 minutes of anomaly detection.</li>
+        <li><strong>Containment:</strong> Isolation of affected virtual environments and revocation of active session tokens.</li>
+        <li><strong>Internal Escalation & Notification:</strong> Notification to executive leadership and impacted clients within 48 hours of confirmed impact.</li>
+        <li><strong>Post-Mortem & Lessons Learned:</strong> Complete root-cause remediation analysis and documentation updates.</li>
+      </ol>
+    </section>
+
+    <section class="legal-section reveal">
+      <h2>6. Vendor Due Diligence & Secure Destruction</h2>
+      <p>
+        Every infrastructure partner and cloud provider utilized by Cipherforge is vetted against SOC 2 Type II or ISO 27001 standards.
+      </p>
+      <p>
+        Upon expiration of the retention periods, media sanitization is executed in compliance with NIST SP 800-88 Rev. 1 (Guidelines for Media Sanitization) through cryptographic erasure and physical disk degaussing.
+      </p>
+    </section>
+
+    <section class="legal-section reveal">
+      <h2>7. Privacy & Data Handling Contact</h2>
+      <p>
+        To request premature data purging or to audit data handling practices, contact:
+      </p>
+      <p>
+        <strong>Cipherforge Privacy Team</strong><br>
+        Attn: Sarah Goldberg, Privacy & Compliance Officer<br>
+        245 W 29th St, Suite 12B, New York, NY 10001<br>
+        Email: <a href="mailto:privacy@cipherforge.io" style="color: var(--accent-2);">privacy@cipherforge.io</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <span class="brand-logo-icon">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="10" fill="#12161e" stroke="#2c3442" stroke-width="1.5" />
+                <path d="M20 7 L31 13 V23 C31 29 25 33 20 35 C15 33 9 29 9 23 V13 Z" stroke="url(#nav-grad-ft-dh)" stroke-width="2" stroke-linejoin="round"/>
+                <defs>
+                  <linearGradient id="nav-grad-ft-dh" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#7c5cff" />
+                    <stop offset="100%" stop-color="#2fe6b8" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            Cipherforge
+          </a>
+          <p class="footer-desc">
+            Offensive security research for the modern enterprise. 245 W 29th St, Suite 12B, New York, NY 10001.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About us</a></li>
+            <li><a href="team.html">Our team</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Governance</h4>
+          <ul>
+            <li><a href="trust.html">Trust & Legal</a></li>
+            <li><a href="documents.html">Documents Overview</a></li>
+            <li><a href="nda.html">Mutual NDA</a></li>
+            <li><a href="dpa.html">Data Processing Agreement</a></li>
+            <li><a href="data-handling.html">Data Handling Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Compliance</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="mailto:security@cipherforge.io">Responsible Disclosure</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span id="year">2026</span> Cipherforge LLC. All rights reserved. Operating under New York State jurisdiction.</div>
+        <div class="mono">NEW YORK &bull; OFFENSIVE SECURITY RESEARCH</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
